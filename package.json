@@ -1,0 +1,43 @@
+{
+  "name": "@0e9b061f/mkv",
+  "version": "0.1.0",
+  "series": "GAFFGARION",
+  "mkv": {
+    "name": "mkv",
+    "before": "🔨",
+    "after": "versioning helper"
+  },
+  "description": "Update version and series in package.json and README.md",
+  "license": "MIT",
+  "homepage": "https://github.com/0E9B061F/mkv",
+  "bugs": "https://github.com/0E9B061F/mkv/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0E9B061F/mkv.git"
+  },
+  "author": {
+    "name": "0E9B061F",
+    "email": "0E9B061F@protonmail.com",
+    "url": "https://github.com/0E9B061F"
+  },
+  "type": "module",
+  "main": "lib/mkv.mjs",
+  "directories": {
+    "lib": "lib",
+    "test": "spec"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "bin": {
+    "mkv": "bin/mkv.mjs"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [
+    "versioning",
+    "documentation",
+    "utility"
+  ]
+}

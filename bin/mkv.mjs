@@ -5,6 +5,7 @@ import { existsSync } from "node:fs"
 import { readFile, writeFile } from "node:fs/promises"
 import { execSync } from "node:child_process"
 import { cwd } from "node:process"
+import clip from "clipboardy"
 
 class Repo {
   constructor(conf={}) {
@@ -45,7 +46,7 @@ class Repo {
   get pAfter() { return this.after ? ` ${this.after}` : "" }
 
   async update(ver) {
-    console.log(`updating to ${ver}`)
+    console.log(`updating to ${ver} ...`)
 
     this.pkg = JSON.parse(await readFile(this.packagePath))
     const rc = this.pkg.mkv || {}
@@ -68,7 +69,7 @@ class Repo {
       vers = [...new Set(vers.map(v=> v.split('.').slice(0,-1).join('.')))]
       this.seriesName = this.series[vers.length-1].toUpperCase()
       this.pkg.series = this.seriesName
-      console.log(`series name: ${this.seriesName}`)
+      console.log(`  series name: ${this.seriesName}`)
     }
 
     if (this.hasReadme) {
@@ -79,13 +80,20 @@ class Repo {
       readme = readme.split('\n').slice(1)
       readme = [line, ...readme]
       await writeFile(this.readmePath, readme.join('\n'))
-      console.log(`updated README.md`)
+      console.log(`  updated README.md`)
     }
 
     await writeFile(this.packagePath, JSON.stringify(this.pkg, null, 2))
-    console.log(`updated package.json`)
+    console.log(`  updated package.json`)
 
-    console.log(`remember to \`git tag ${ver}\` after committing`)
+    console.log("done")
+    const tagcmd = `git tag ${ver}`
+    let copytxt = ""
+    try {
+      await clip.write(tagcmd)
+      copytxt = " (copied to clipboard)"
+    } catch {} 
+    console.log(`  remember to \`${tagcmd}\` after committing${copytxt}`)
   }
   join(...parts) {
     return join(this.dir, ...parts)

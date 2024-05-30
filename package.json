@@ -1,7 +1,7 @@
 {
   "name": "@0e9b061f/mkv",
-  "version": "0.1.1",
-  "series": "GAFFGARION",
+  "version": "0.2.0",
+  "series": "T.G. CID",
   "mkv": {
     "name": "mkv",
     "before": "🔨",
@@ -40,5 +40,8 @@
     "versioning",
     "documentation",
     "utility"
-  ]
+  ],
+  "dependencies": {
+    "clipboardy": "^4.0.0"
+  }
 }

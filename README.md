@@ -1,4 +1,4 @@
-# 🔨 **mkv** versioning helper v0.1.1 'GAFFGARION'
+# 🔨 **mkv** versioning helper v0.2.0 'T.G. CID'
 [![Version][icon-ver]][repo]
 [![License][icon-lic]][license]
 [![Maintenance][icon-mnt]][commits]<br/>

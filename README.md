@@ -1,4 +1,4 @@
-# 🔨 **mkv** versioning helper v0.1.0 'GAFFGARION'
+# 🔨 **mkv** versioning helper v0.1.1 'GAFFGARION'
 [![Version][icon-ver]][repo]
 [![License][icon-lic]][license]
 [![Maintenance][icon-mnt]][commits]<br/>
@@ -9,13 +9,11 @@
 ```json
 {
   "name": "@0e9b061f/mkv",
-  "version": "0.1.0",
   "mkv": {
     "name": "mkv",
     "before": "🔨",
     "after": "versioning helper"
-  },
-  . . .
+  }
 }
 ```
 
@@ -41,13 +39,13 @@ However, this relies on your project existing in a git repo and using version ta
 
 # License
 
-Copyright 2020-2024 **[0E9B061F][gh]**<br/>
+Copyright 2024 **[0E9B061F][gh]**<br/>
 Available under the terms of the [MIT License][license].
 
 
 [gh]:https://github.com/0E9B061F
 [repo]:https://github.com/0E9B061F/mkv
-[npm]:https://www.npmjs.com/package/mkv
+[npm]:https://www.npmjs.com/package/@0e9b061f/mkv
 [commits]:https://github.com/0E9B061F/mkv/commits/master
 [license]:https://github.com/0E9B061F/mkv/blob/master/LICENSE
 

@@ -33,6 +33,7 @@
     "mkv": "bin/mkv.mjs"
   },
   "scripts": {
+    "mkv": "node bin/mkv.mjs",
     "test": "jasmine"
   },
   "keywords": [
